@@ -30,6 +30,7 @@ the external EPROM. After this period this decoding will be disabled and only ac
 The logic to handle the decoding and the shiftregister is implemented in a GAL16V8 PLD. The PLD also is used to debounce the RESET 
 signal from the toggle switch.
 
+![Schematic](https://i.imgur.com/vSb7z4Yl.png)
 
 ## Firmware
 
