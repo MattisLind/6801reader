@@ -34,6 +34,8 @@ signal from the toggle switch.
 The firmware used is a small debug monitor developed by Daniel Tufvesson [called MC3 monitor](http://www.waveguide.se/?article=mc3-monitor-13) which is modified 
 to handle different memory locations for ROM and RAM. The UART setup is modified to handle a 3.6864 MHz crystal.
 
+The monitor can then be used to dump the ROM contents and transfer it to the host PC over the serial port.
+
 ## Schemtic and layout.
 
 A schematic has been created in KiCAD and a breadboard circuit. Possibly a layout is created as well.
