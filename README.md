@@ -1,5 +1,7 @@
 # 6801reader
-This project aims at reading the ROM content out of a mask programmed MC6801 uP.
+This project aims at reading the ROM content out of a mask programmed MC6801 uP used in the Ericsson PC keyboard.
+
+![Ericsson PC keyboard](https://i.imgur.com/ak3YRvul.png)
 
 To help the MAME project to create a faithful emulation of the Ericsson PC I was asked to dump the ROM contents of a mask programmed 
 6801 uProcessor which is the brain inside the keyboard. Compared to standard IBM PC the Ericsson PC make use of a completely different keyboard protocol
