@@ -1,0 +1,41 @@
+Name     MC6801B ;
+PartNo   00 ;
+Date     2019-08-27 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Dalby Datormuseum ;
+Assembly None ;
+Location  ;
+Device   g16v8a ;
+
+/* *************** INPUT PINS *********************/
+PIN  1   =   E; /*                                 */ 
+PIN  2   =   A15; /*                                 */ 
+PIN  3   =   A14; /*                                 */ 
+PIN  4   =   A13; /*                                 */ 
+PIN  5   =   A12; /*                                 */ 
+PIN  6   =   A11; /*                                 */ 
+PIN  7   =   RW; /*                                 */ 
+PIN  8   =   RES0; /*                                 */ 
+PIN  9   =   RES1; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN  12   = RESET; /*                                 */ 
+PIN  13   = CS; /*                                 */ 
+PIN  14   = Q1;
+PIN  15   = Q2;
+PIN  16   = Q3;
+PIN  17   = RESET_L;
+/* *************** PINNODES    *********************/
+
+
+RESET = ! (RESET_L & RES0);
+RESET_L = !(RESET & RES1);
+
+Q1.D = RESET_L;
+Q2.D = Q1;
+Q3.D = Q2;
+
+CS = ! (( A15 & A14 & A13 & A12 & !A11 & RW) # (A15 & A14 & A13 & A12 & A11 & RW & Q3));
+
+
