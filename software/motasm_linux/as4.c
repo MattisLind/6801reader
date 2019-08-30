@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+//#include <conio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include "as.c"
+#include "table4.h"
+#include "do4.c"
+#include "pseudo.c"
+#include "eval.c"
+#include "symtab.c"
+#include "util.c"
+#include "ffwd.c"
+#include "output.c"
