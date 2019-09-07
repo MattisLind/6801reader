@@ -47,9 +47,9 @@ A schematic has been created in KiCAD and a breadboard circuit. Possibly a layou
 
 ![Schematic](https://i.imgur.com/UaBsxRY.jpg)
 
-A mockup was created on a breadboard and a small problem was detected in the PLD. New PLD code fixed that problem. It was also detected that 68701 is sufficently different from the 6801 to not work with this circuit. The reason is that the 68701 has the interrupt vectors in a different place when running in mode 0. The 6803, which is the romless variant of the 6801, does work identical to the 6801. As it turns out it works perfectly with the circuit above. One interesting thing is that there actually are ROM content in the ROM which seems to be at least potentially correct. At least the RESET vector is in the correct spot!
+A mockup was created on a breadboard and a small problem was detected in the PLD. New PLD code fixed that problem. It was also detected that 68701 is sufficently different from the 6801 to not work with this circuit. The reason is that the 68701 has the interrupt vectors in a different place when running in mode 0. The 6803, which is the romless variant of the 6801, does work identical to the 6801. As it turns out it works perfectly with the circuit above. One interesting thing is that there actually are ROM content in the ROM which seems to be at least potentially correct. At least the RESET vector is in the correct spot! So it seems the 6803 is just 6801 chips which has been discarded due to bad firmware!? 
 
-With the 6803 and 6801 processor a RESET gave us a ">" prompt in response. It was working!
+With the baudrate set to 4800 bps a 6803 or a 6801 processor gave us a ">" prompt in response to pressing the reset button. It was working! 
 
 ![Schematic](https://i.imgur.com/XhZINyW.jpg)
 
