@@ -35,7 +35,7 @@ signal from the toggle switch.
 ## Firmware
 
 The firmware used is a small debug monitor developed by Daniel Tufvesson [called MC3 monitor](http://www.waveguide.se/?article=mc3-monitor-13) which is modified 
-to handle different memory locations for ROM and RAM. The UART setup is modified to handle a 3.6864 MHz crystal.
+to handle different memory locations for ROM and RAM. The 2.4576 MHz crystal result in a 4800 bps rate of the serial port.
 
 The monitor can then be used to dump the ROM contents and transfer it to the host PC over the serial port.
 
