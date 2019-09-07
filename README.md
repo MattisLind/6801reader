@@ -30,7 +30,7 @@ the external EPROM. After this period this decoding will be disabled and only ac
 The logic to handle the decoding and the shiftregister is implemented in a GAL16V8 PLD. The PLD also is used to debounce the RESET 
 signal from the toggle switch.
 
-![Schematic](https://i.imgur.com/KEpKmXOl.png)
+![Schematic](https://i.imgur.com/hHou4n7.jpg)
 
 ## Firmware
 
@@ -42,3 +42,20 @@ The monitor can then be used to dump the ROM contents and transfer it to the hos
 ## Schemtic and layout.
 
 A schematic has been created in KiCAD and a breadboard circuit. Possibly a layout is created as well.
+
+## Mockup 
+
+![Schematic](https://i.imgur.com/UaBsxRY.jpg)
+
+A mockup was created on a breadboard and a small problem was detected in the PLD. New PLD code fixed that problem. It was also detected that 68701 is sufficently different from the 6801 to not work with this circuit. The reason is that the 68701 has the interrupt vectors in a different place when running in mode 0. The 6803, which is the romless variant of the 6801, does work identical to the 6801. As it turns out it works perfectly with the circuit above. One interesting thing is that there actually are ROM content in the ROM which seems to be at least potentially correct. At least the RESET vector is in the correct spot!
+
+With the 6803 and 6801 processor a RESET gave us a ">" prompt in response. It was working!
+
+![Schematic](https://i.imgur.com/XhZINyW.jpg)
+
+The resulting dump of the Ericsson keyboard 6801 firmware contained some interesting strings!
+
+![Schematic](https://i.imgur.com/tkxOztM.jpg)
+
+
+
