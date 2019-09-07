@@ -1,4 +1,4 @@
-update=tor 29 aug 2019 20:16:50
+update=lör  7 sep 2019 21:40:08
 version=1
 last_client=kicad
 [general]
