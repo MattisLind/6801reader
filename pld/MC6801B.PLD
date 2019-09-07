@@ -9,7 +9,6 @@ Location  ;
 Device   g16v8a ;
 
 /* *************** INPUT PINS *********************/
-PIN  1   =   E; /*                                 */ 
 PIN  2   =   A15; /*                                 */ 
 PIN  3   =   A14; /*                                 */ 
 PIN  4   =   A13; /*                                 */ 
@@ -26,6 +25,9 @@ PIN  14   = Q1;
 PIN  15   = Q2;
 PIN  16   = Q3;
 PIN  17   = RESET_L;
+PIN  18   = NOT_E;
+PIN  19   = E;
+
 /* *************** PINNODES    *********************/
 
 
@@ -36,6 +38,6 @@ Q1.D = RESET_L;
 Q2.D = Q1;
 Q3.D = Q2;
 
-CS = ! (( A15 & A14 & A13 & A12 & !A11 & RW) # (A15 & A14 & A13 & A12 & A11 & RW & Q3));
-
+CS = ! (( A15 & A14 & A13 & A12 & !A11 & RW & E) # (A15 & A14 & A13 & A12 & A11 & RW & Q3 & E));
+NOT_E = ! E;
 
