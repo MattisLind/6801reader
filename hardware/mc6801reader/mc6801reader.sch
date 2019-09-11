@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:mc6801reader-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -134,19 +133,11 @@ Entry Wire Line
 Entry Wire Line
 	6750 2800 6850 2700
 Entry Wire Line
-	6750 2900 6850 2800
-Entry Wire Line
-	6750 3000 6850 2900
-Entry Wire Line
 	6750 3100 6850 3000
 Wire Wire Line
 	6850 2600 7050 2600
 Wire Wire Line
 	6850 2700 7050 2700
-Wire Wire Line
-	6850 2800 7050 2800
-Wire Wire Line
-	6850 2900 7050 2900
 Wire Wire Line
 	6850 3000 7050 3000
 Text Label 6900 2600 0    50   ~ 0
@@ -960,8 +951,6 @@ NoConn ~ 2900 2200
 NoConn ~ 2900 2300
 NoConn ~ 2900 2400
 NoConn ~ 2900 2500
-Wire Bus Line
-	4450 1250 4450 2400
 Wire Wire Line
 	6300 4550 6300 4800
 Wire Wire Line
@@ -976,32 +965,53 @@ Wire Wire Line
 	6400 4450 6400 4900
 Wire Wire Line
 	6400 4900 6200 4900
-Wire Wire Line
-	3900 2500 5200 2500
-Wire Wire Line
-	3900 1800 5200 1800
-Wire Wire Line
-	3900 1900 5200 1900
-Wire Wire Line
-	3900 2000 5200 2000
-Wire Wire Line
-	3900 2100 5200 2100
-Wire Wire Line
-	3900 2200 5200 2200
-Wire Wire Line
-	3900 2300 5200 2300
-Wire Wire Line
-	3900 2400 5200 2400
-Wire Bus Line
-	6750 2700 6750 3850
-Wire Bus Line
-	4900 3850 4900 5200
-Wire Bus Line
-	8200 1250 8200 2400
-Wire Bus Line
-	4450 2800 4450 3850
 Text Label 5000 3500 0    50   ~ 0
 RX
 Text Label 5000 3600 0    50   ~ 0
 TX
+Wire Bus Line
+	4450 1250 4450 2400
+Wire Wire Line
+	6850 2800 7050 2800
+Entry Wire Line
+	6750 2900 6850 2800
+$Comp
+L power:GND #PWR?
+U 1 1 5D7B80EE
+P 6650 3550
+F 0 "#PWR?" H 6650 3300 50  0001 C CNN
+F 1 "GND" H 6655 3377 50  0000 C CNN
+F 2 "" H 6650 3550 50  0001 C CNN
+F 3 "" H 6650 3550 50  0001 C CNN
+	1    6650 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2900 6650 3550
+Wire Wire Line
+	3900 2400 5200 2400
+Wire Wire Line
+	3900 2300 5200 2300
+Wire Wire Line
+	3900 2200 5200 2200
+Wire Wire Line
+	3900 2100 5200 2100
+Wire Wire Line
+	3900 2000 5200 2000
+Wire Wire Line
+	3900 1900 5200 1900
+Wire Wire Line
+	3900 1800 5200 1800
+Wire Wire Line
+	3900 2500 5200 2500
+Wire Wire Line
+	6650 2900 7050 2900
+Wire Bus Line
+	4900 3850 4900 5200
+Wire Bus Line
+	6750 2700 6750 3850
+Wire Bus Line
+	4450 2800 4450 3850
+Wire Bus Line
+	8200 1250 8200 2400
 $EndSCHEMATC
