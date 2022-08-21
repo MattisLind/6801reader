@@ -27,6 +27,7 @@ signal when it transits from active to inactive. The three stage shiftregister i
 The result will be a delayed RESET signal. As long as the delayed RESET signal is low the deccoding will map addresses in the F800-FFFF range to
 the external EPROM. After this period this decoding will be disabled and only accesses to F000-F7FF will be decoded as external.
 
+
 The logic to handle the decoding and the shiftregister is implemented in a GAL16V8 PLD. The PLD also is used to debounce the RESET 
 signal from the toggle switch.
 
@@ -38,6 +39,9 @@ The firmware used is a small debug monitor developed by Daniel Tufvesson [called
 to handle different memory locations for ROM and RAM. The 2.4576 MHz crystal result in a 4800 bps rate of the serial port.
 
 The monitor can then be used to dump the ROM contents and transfer it to the host PC over the serial port.
+
+The 2764 is a 8k EPROM with total address range 0000-1FFF.
+This means that the 2k monitor code need to be in BOTH the 1000-17FF range and the 1800-1FFF range for the design to work. I.e. during the first two cycles it will access the 1800-1FFF range and after that the 1000-17FF range will be accessed. Actually repeating the monitor on all four 2k banks of the EPROM wouldn't harm at all. The PLD will select the proper range.
 
 ## Schemtic and layout.
 
