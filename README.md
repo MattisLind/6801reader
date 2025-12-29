@@ -61,5 +61,10 @@ The resulting dump of the Ericsson keyboard 6801 firmware contained some interes
 
 ![Schematic](https://i.imgur.com/tkxOztM.jpg)
 
+## PCB layout
+
+A modified design and PCB layout were created with KiCad 9.0. The main change was to add a FT232 USB to serial IC. Additionally, A11 was reconnected to the EPROM, requiring the ROM to be put in all four banks as suggested above.
+
+(modified design and layout by Tom Virostek (xuulan))
 
 

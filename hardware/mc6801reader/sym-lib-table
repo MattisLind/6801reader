@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "mc6801reader")(type "KiCad")(uri "${KIPRJMOD}/mc6801reader.kicad_sym")(options "")(descr ""))
+)
