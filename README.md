@@ -31,7 +31,7 @@ the external EPROM. After this period this decoding will be disabled and only ac
 The logic to handle the decoding and the shiftregister is implemented in a GAL16V8 PLD. The PLD also is used to debounce the RESET 
 signal from the toggle switch.
 
-![Schematic](https://raw.githubusercontent.com/MattisLind/6801reader/master/hardware/mc6801reader/mc6801reader.jpg)
+![Schematic](https://github.com/MattisLind/6801reader/blob/master/hardware/mc6801reader/mc6801reader.png)
 
 ## Firmware
 
